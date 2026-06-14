@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment Page</title>
+
+<style>
+body{
+font-family: Arial;
+background:#f5f5f5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+background:white;
+padding:25px;
+border-radius:10px;
+width:350px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+h2{
+margin-bottom:10px;
+}
+
+p{
+margin:8px 0;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#1a3c8d;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:#0f2a66;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Booking Summary</h2>
+
+<p id="title"></p>
+<p id="desc"></p>
+<p id="price"></p>
+<p id="duration"></p>
+
+<hr>
+
+<h3>User Details</h3>
+
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<input type="text" placeholder="Phone Number">
+
+<button onclick="payNow()">Pay Now</button>
+
+</div>
+
+<script>
+// 📦 GET DATA FROM LOCALSTORAGE
+const data = JSON.parse(localStorage.getItem("package"));
+
+if(data){
+document.getElementById("title").innerText = data.title;
+document.getElementById("desc").innerText = data.desc;
+document.getElementById("price").innerText = "Price: " + data.price;
+document.getElementById("duration").innerText = "Duration: " + data.duration;
+}
+
+function payNow(){
+alert("Payment Successful 🎉 (Demo Mode)");
+localStorage.removeItem("package");
+window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

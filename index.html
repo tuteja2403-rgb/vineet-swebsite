@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Travel</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">Premium Travel</div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>Explore the World with Us</h1>
+
+        <p>Luxury, adventure, and unforgettable journeys.</p>
+
+        <button class="btn-primary">View Destinations</button>
+
+        <button class="btn-secondary">Plan My Trip</button>
+    </div>
+
+</section>
+
+<!-- Destinations -->
+<section id="destinations" class="destinations">
+
+    <h2>Popular Destinations</h2>
+
+    <div class="grid">
+
+        <div class="card" onclick="showPlace('paris')">
+    <img src="assets/paris.jpg" alt="">
+    <h3>Paris</h3>
+</div>
+
+<div class="card" onclick="showPlace('bali')">
+    <img src="assets/bali.jpg" alt="">
+    <h3>Bali</h3>
+</div>
+
+<div class="card" onclick="showPlace('tokyo')">
+    <img src="assets/tokyo.jpg" alt="">
+    <h3>Tokyo</h3>
+</div>
+
+<div class="card" onclick="showPlace('newyork')">
+    <img src="assets/ny.jpg" alt="">
+    <h3>New York</h3>
+</div>
+
+    </div>
+
+</section>
+
+<!-- Packages -->
+<section id="packages" class="packages">
+
+    <h2>Travel Packages</h2>
+
+    <div class="grid">
+
+        <div class="package" onclick="showPlace('luxury', 'package')">
+    <img src="assets/luxury.jpg" alt="">
+    <h3>Luxury Escape</h3>
+</div>
+
+<div class="package" onclick="showPlace('adventure', 'package')">
+    <img src="assets/adventure.jpg" alt="">
+    <h3>Adventure Trek</h3>
+</div>
+
+<div class="package" onclick="showPlace('romantic', 'package')">
+    <img src="assets/romantic.jpg" alt="">
+    <h3>Romantic Getaway</h3>
+</div>
+
+    </div>
+
+</section>
+
+<!-- Why Us -->
+<section id="why-us" class="why-us">
+
+    <h2>Why Choose Us</h2>
+
+    <div class="features">
+
+    <div class="feature">
+        <h3>Tailored Itineraries</h3>
+        <p>We design trips according to your personal preferences and comfort.</p>
+    </div>
+
+    <div class="feature">
+        <h3>24/7 Support</h3>
+        <p>Our travel experts are available anytime to assist you during your journey.</p>
+    </div>
+
+    <div class="feature">
+        <h3>Best Price Guarantee</h3>
+        <p>We ensure you get the most affordable and value-packed travel deals.</p>
+    </div>
+
+</div>
+</section>
+
+<section class="stats">
+    <div class="stat-box">
+        <h2>5000+</h2>
+        <p>Happy Travelers</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>120+</h2>
+        <p>Destinations</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>15+</h2>
+        <p>Years Experience</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>98%</h2>
+        <p>Customer Satisfaction</p>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="testimonials">
+
+    <h2>Traveler Stories</h2>
+
+    <div class="slider">
+
+        <div class="testimonial">
+            <img src="assets/testimonial1.jpg" alt="">
+            <p>"Bali was magical!" - Sarah</p>
+        </div>
+
+        <div class="testimonial">
+            <img src="assets/testimonial2.jpg" alt="">
+            <p>"Paris felt like a dream." - Clark</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>Ready to Plan Your Journey?</h2>
+
+    <button class="btn-primary">Start Planning</button>
+
+    <button class="btn-secondary">Talk to an Expert</button>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+
+    <form>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button class="btn-primary">Send Message</button>
+
+    </form>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+    <p>© 2026 Premium Travel. All Rights Reserved.</p>
+
+</footer>
+
+<script src="script.js"></script>
+<div id="detailsBox" class="details-box">
+    <h2 id="placeTitle">Select a destination</h2>
+    <p id="placeDesc"></p>
+    <p id="placePrice"></p>
+    <p id="placeDuration"></p>
+
+    <button onclick="closeBox()">Close</button>
+</div>
+<button id="topBtn">↑</button>
+</body>
+</html>
